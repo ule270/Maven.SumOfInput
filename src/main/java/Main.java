@@ -1,25 +1,31 @@
 /**
  * Created by iyasuwatts on 10/17/17.
  */
+import java.util.Scanner;
 public class Main {
-
     public static void main(String[] args){
         
         int number = getInputNumber();
-        
         int sum = sumOfNumbers(number);
-        
-        System.out.println(sum);
+
+       System.out.println(sum);
 
     }
-    
     // do this one and the lab is complete. really.
-    // return the sum of 0 to n... if n == 3, the result should be 6
+    // return the sum of 0 to n... if n == 3, the result should be
+
     int sumOfNumbers(int n) {
-        return 0;
+        Scanner scanner = new scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            sum = sum + 1;
+        }
+        sum = sum + n;
+        return System.out.printf(String.valueOf(n+ '=' +sum));
     }
-    
-    
+
     int getInputNumber() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter any number: ");
@@ -31,8 +37,6 @@ public class Main {
         scan.close();
         return num;
     }
-    
-    
     
     // for Extra Credit
     int gaussianSumOfNumbers(int n) {
